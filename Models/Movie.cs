@@ -15,7 +15,7 @@ namespace CineMania.Models
         public string Description { get; set; }
         [DataType(DataType.Date)]
         [DisplayName("Release Date")]
-        [DisplayFormat(DataFormatString = "{0:dd-MM-YYYY}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd-MM-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime ReleaseDate { get; set; }
         [Required]
         public string ImageName { get; set; }
