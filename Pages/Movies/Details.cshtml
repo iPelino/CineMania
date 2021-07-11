@@ -6,42 +6,20 @@
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
-
 <div>
-    <h4>Movie</h4>
+    <h4>@Model.Movie.Title</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Movie.Title)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Movie.Title)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Movie.Description)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Movie.Description)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Movie.ReleaseDate)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Movie.ReleaseDate)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Movie.ImageName)
-        </dt>
-        <dd class="col-sm-10">
-            <img src="/images/posters/@Html.DisplayFor(model => model.Movie.ImageName)" alt="">
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Movie.Genre)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Movie.Genre)
-        </dd>
+        <div class="col-md-3">
+            <img class="img-fluid" src="/images/posters/@Model.Movie.ImageName" alt="">
+        </div>
+        <div class="col-md-6">
+            <h5>Synopsis</h5>
+            <p>@Model.Movie.Description</p>
+        </div>
+        <div class="col-md-3">
+            <h5>Related Movies</h5>
+        </div>
     </dl>
 </div>
 <div>
