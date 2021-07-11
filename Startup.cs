@@ -27,7 +27,7 @@ namespace CineMania
         {
             services.AddDbContext<CinemaniaContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("Cinemania")));
-            services.AddRazorPages();
+            services.AddRazorPages().AddRazorRuntimeCompilation();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
